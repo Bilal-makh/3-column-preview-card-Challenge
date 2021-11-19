@@ -1,0 +1,145 @@
+/*start globale rules */
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+.attribution { 
+    font-size: 11px;
+    text-align: center; 
+    width: 100%;
+    color: #000;
+}
+@media (max-width: 767px) {
+    .attribution {
+        margin-top: 30px;
+    }
+    
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+/*End globale rules */
+body{
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    color: #fff;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media (max-width:991px){
+    .container{
+        padding-top: 100px;
+        padding-bottom: 100px;
+        margin: 0 15px;
+    }
+}
+@media (max-width:767px){
+    .container{
+        padding-top: 100px;
+        padding-bottom: 100px;
+        margin: 0 15px;
+    }
+}
+
+.boxs{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px ,1fr));
+}
+.box{
+    padding: 20px;
+}
+
+.box .content{
+    padding: 0px 40px;
+}
+
+.sedans{
+    background-color: var(--Bright-orange);
+}
+@media (min-width: 992px) {
+    .sedans{
+    border-radius: 10px 0 0 10px;
+ }
+}
+@media (max-width: 767px) {
+    .sedans{
+    border-radius: 10px 10px 0 0;
+
+ }
+}
+.suvs{
+    background-color: var(--Dark-cyan);
+}
+.luxury{
+    background-color: var(--Very-dark-cyan);
+    /* border-radius: 0 10px 10px 0; */
+}
+@media (min-width: 992px) {
+    .luxury{
+    border-radius: 0 10px 10px 0;
+ }
+}
+@media (max-width: 767px) {
+    .luxury{
+    border-radius: 0 0px 10px 10px;
+ }
+}
+.box img{
+    margin: 40px 0 ;
+}
+
+.box h2{
+    margin: 0 0 30px;
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.box p{
+    color: var(--Transparent-white-paragraphs);
+    line-height: 1.6;
+    margin-bottom: 80px;
+}
+.box a{
+    display: block;
+    width: fit-content;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 2px solid var(--Very-light-gray-background-headings-buttons);
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.box a:hover{
+    background-color: transparent;
+    color: #fff;
+}
+.sedans a{
+    color: var(--Bright-orange);
+}
+.suvs a{
+    color: var(--Dark-cyan);
+}
+.luxury a{
+    color: var(--Very-dark-cyan);
+}
